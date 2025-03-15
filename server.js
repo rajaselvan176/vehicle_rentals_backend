@@ -8,7 +8,9 @@ const bookingRoutes = require("./routes/bookingRoutes"); // ✅ Import booking r
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://brilliant-lolly-7cee69.netlify.app/'
+}));
 app.use(express.json());
 
 // Connect to MongoDB
